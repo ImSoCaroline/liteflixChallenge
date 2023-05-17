@@ -1,0 +1,42 @@
+@import './colors.module.scss';
+
+.nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 20px;
+  z-index: 999;
+  background: transparent;
+  transition: background 0.5s linear;
+
+  &__userIcon img {
+    border-radius: 50%;
+  }
+
+  &__bellIcon {
+    display: none;
+  }
+}
+
+.menuOpen {
+  background: $bg-color;
+}
+
+@media only screen and (min-width: 900px) {
+  .nav {
+    justify-content: flex-end;
+    padding: 30px 100px;
+
+    &__bellIcon {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-image: url('../../public/assets/Bell.svg');
+      margin: 0 42px;
+    }
+  }
+}

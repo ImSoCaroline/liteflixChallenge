@@ -1,0 +1,53 @@
+@import './colors.module.scss';
+
+.dropdownContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 50px 0;
+
+    &__select {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        width: 100%;
+        position: relative;
+        padding-bottom: 30px;
+    }
+
+    &__label {
+        margin: 0 10px;
+    }
+
+    &__arrowUp, &__arrowDown {
+        background-image: url('../../public/assets/arrow.svg');
+        width: 13px;
+        height: 8px;
+    }
+
+    &__arrowUp {
+        transform: rotate(180deg);
+    }
+
+    &__optionContainer {
+        width: 100%;
+        background-color: $bg-color;
+        padding: 16px 0;
+        position: absolute;
+        top: 30px;
+        z-index: 9;
+    }
+
+    &__option {
+        margin: 16px 0;
+        line-height: 18px;
+    }
+
+    &__optionSelected {
+        background-image: url('../../public/assets/tick.svg');
+        background-repeat: no-repeat;
+        background-position: 100% 50%;
+    }
+}

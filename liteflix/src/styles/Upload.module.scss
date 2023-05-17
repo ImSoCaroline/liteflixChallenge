@@ -1,0 +1,107 @@
+@import './colors.module.scss';
+
+.upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 90px 0;
+
+  &__fileContainer {
+    padding: 24px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    progress {
+      width: 100%;
+    }
+  }
+
+  input[type="text"] {
+    background: $bg-color;
+    color: $lf-white;
+    border: none;
+    border-bottom: 1px solid $lf-white;
+    width: 163px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 96px;
+  }
+
+  &__title {
+    font-size: 22px;
+    line-height: 22px;
+    color: $lf-green;
+    margin-bottom: 20px;
+  }
+
+  &__file {
+    position: relative;
+    input[type="file"] {
+      position: absolute;
+      left: -9999px;
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 327px;
+    height: 80px;
+    background: $bg-color;
+    border: 1px dashed $lf-white;
+    color: $lf-white;
+    margin: 50px 0;
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    background-image: url('../../public/assets/Fill.svg');
+    background-repeat: no-repeat;
+    margin-right: 16px;
+  }
+
+  &__message {
+    margin-bottom: 16px;
+    text-align: left;
+  }
+
+  &__ready {
+    text-align: right;
+    margin: 16px 0;
+    color: $lf-green;
+  }
+  
+}
+
+.uploaded {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+}
+
+.messageContainer {
+  text-align: center;
+  margin: 130px 0;
+
+  &__title {
+    font-size: 24px;
+    line-height: 26px;
+    margin-bottom: 32px;
+  }
+
+  &__message {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+@media only screen and (min-width:900px) {
+  .exit {
+    display: none;
+  }
+}

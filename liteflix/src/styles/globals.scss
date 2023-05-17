@@ -1,0 +1,44 @@
+@import './colors.module.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: $bg-color;
+}
+
+a {
+  color: $lf-white;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6, a, p, label, input {
+  color: $lf-white;
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: 4px;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+span.bold, h1 {
+  font-weight: 700;
+}
+
+h2, h3, h4, h5, h6, a, p, label, input {
+  font-weight: 400;
+}
+
+p, a {
+  font-size: 18px;
+  line-height: 18px;
+}
