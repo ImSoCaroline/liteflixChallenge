@@ -18,7 +18,8 @@ The functionality of adding movies should simply allow the user to upload an ima
 
 - Development:
 
-I decided to use React with Next and Typescript for this project
+I decided to use React with Next and Typescript for this project.
+
 For the styles I used SASS with BEM
 
 ## Getting Started
