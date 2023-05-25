@@ -15,8 +15,8 @@ export default function MovieCard({ movie }: MovieCardProps) {
   }
 
   return (
-    <div className={styles.movie} onClick={handleClick}>
-      <div className={`${styles.movie__gradient} ${isActive && styles.movie__active}`} />
+    <div className={`${styles.movie} ${isActive && styles.movie__active}`} onClick={handleClick}>
+      <div className={styles.movie__gradient} />
       <Image
         src={
           movie.backdrop_path
@@ -28,12 +28,12 @@ export default function MovieCard({ movie }: MovieCardProps) {
         height={172}
         style={{ objectFit:'cover' }}
       />
-      <div className={`${styles.movie__title} ${isActive && styles.movie__active}`}>
+      <div className={styles.movie__title}>
         <div className={styles.movie__play} />
         <h6>{movie.title}</h6>
       </div>
       {movie.vote_average && (
-        <div className={`${styles.movie__info} ${isActive && styles.movie__active}`}>
+        <div className={styles.movie__info}>
           <div className={styles.movie__rating}>
             <div className={styles.movie__star} />
             <p>{movie.vote_average}</p>

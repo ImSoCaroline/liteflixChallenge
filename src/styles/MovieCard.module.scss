@@ -2,14 +2,23 @@
 
 .movie {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 6%;
+  width: 100%;
+  height: 47.5vw;
+  padding: 6.5vw;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
 
   &__info, &__title {
-    position: absolute;
     width: 100%;
-    bottom: 0;
     display: flex;
-    padding: 24px;
   }
 
   &__title {
@@ -17,34 +26,11 @@
     align-items: center;
     justify-content: flex-end;
     height: 100%;
-    z-index: 2;
-    margin-bottom: 8px;
 
     h6 {
-      font-size: 16px;
-      line-height: 16px;
+      font-size: 4.2vw;
+      line-height: 4.2vw;
       text-align: center;
-    }
-  }
-
-  &__title.movie__active {
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    height: fit-content;
-    bottom: 36px;
-
-    .movie__play {
-      margin-bottom: 0;
-      width: 24px;
-      min-width: 24px;
-      height: 24px;
-      background-size: 30%;
-      margin-right: 12px;
-    }
-
-    h6 {
-      text-align: left;
     }
   }
 
@@ -55,53 +41,85 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, transparent 22%, $bg-color 120%);
-    z-index: 1;
-  }
-
-  &__gradient.movie__active {
-    background: $bg-transparent;
+    z-index: -1;
   }
 
   &__play {
     background-color: $bg-transparent;
     background-image: url('../../public/assets/Path2.svg');
     background-repeat: no-repeat;
-    background-position: 55% 50%;
+    background-size: 32%;
+    background-position: 57% 52%;
     border-radius: 50%;
-    border: 1.5px solid $lf-white;
-    width: 48px;
-    height: 48px;
-    margin-bottom: 24px;
+    border: 2px solid $lf-white;
+    width: 12.8vw;
+    height: 12.8vw;
+    margin-bottom: 8%;
   }
 
   &__info {
     display: none;
-
-    p {
-      font-size: 14px;
-      line-height: 14px;
-    }
   }
 
-  &__info.movie__active {
-    display: flex;
-    z-index: 2;
-    justify-content: space-between;
-  }
+}
 
-  &__rating{
-    display: flex;
-  }
+.movie__active {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  .movie{
+    &__title {
+      flex-direction: row;
+      justify-content: flex-start;
+      height: fit-content;
+      margin-bottom: 8%;
   
-  &__star {
-    width: 12px;
-    height: 12px;
-    background-image: url('../../public/assets/Star.svg');
-    margin-right: 6px;
+      h6 {
+        text-align: left;
+        margin-left: 2vw;
+      }
+    }
+  
+    &__play {
+      background-size: 37%;
+      background-position: 60% 50%;
+      margin-bottom: 0;
+      width: 7vw;
+      height: 7vw;
+      margin-right: 4%;
+    }
+  
+    &__gradient {
+      background: $bg-transparent;
+    }
+    
+    &__info {
+      display: flex;
+      z-index: 2;
+      justify-content: space-between;
+
+      p {
+        font-size: 3.7vw;
+        line-height: 3.7vw;
+      }
+    }
+    
+    &__rating{
+      display: flex;
+    }
+    
+    &__star {
+      width: 3.2vw;
+      height: 3.2vw;
+      background-image: url('../../public/assets/Star.svg');
+      background-size: cover;
+      margin-right: 6px;
+    }
   }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1024px) {
   .movie {
     &__play {
       width: 30px;
