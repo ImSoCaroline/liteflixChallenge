@@ -33,8 +33,9 @@
 
     &__optionContainer {
         width: 100%;
+        min-width: max-content;
         background-color: $bg-color;
-        padding: 16px 0;
+        padding: 16px;
         position: absolute;
         top: 30px;
         z-index: 9;
@@ -43,11 +44,19 @@
     &__option {
         margin: 16px 0;
         line-height: 18px;
+
+        p {
+            font-weight: lighter;
+        }
     }
 
     &__optionSelected {
         background-image: url('../../public/assets/tick.svg');
         background-repeat: no-repeat;
         background-position: 100% 50%;
+
+        p {
+            font-weight: bold;
+        }
     }
 }
