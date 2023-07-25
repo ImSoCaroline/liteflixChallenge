@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
+import { isMobileDevice } from "@./utils/browserUtils";
 
 import styles from "@./styles/MovieCard.module.scss";
 
@@ -9,13 +10,16 @@ type MovieCardProps = {
 
 export default function MovieCard({ movie }: MovieCardProps) {
   const [isActive, setIsActive] = useState(false);
+  const isMobile = isMobileDevice();
 
   const handleClick = () => {
-    setIsActive(!isActive)
+    setIsActive(!isActive);
   }
 
+  const active = isMobile && isActive;
+
   return (
-    <div className={`${styles.movie} ${isActive && styles.movie__active}`} onClick={handleClick}>
+    <div className={`${styles.movie} ${active && styles.movie__active}`} onClick={handleClick}>
       <div className={styles.movie__gradient} />
       <Image
         src={

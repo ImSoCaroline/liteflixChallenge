@@ -121,13 +121,42 @@
 
 @media only screen and (min-width: 1024px) {
   .movie {
+    padding: 1.5vw;
+    height: 8vw;
+
     &__play {
-      width: 30px;
+      width: 3.5vw;
+      height: 3.5vw;
     }
-    img {
-      max-width: 220px;
-      max-height: 130px;
+
+    &__title h6 {
+      font-size: 1.5vw;
+      line-height: 1.5vw;
     }
   }
-  
+
+  .movie__active {
+    .movie {
+      &__play {
+        width: 2.5vw;
+        height: 2.5vw;
+        margin-right: 0;
+      }
+
+      &__info p{
+        font-size: 1.5vw;
+        line-height: 1.5vw;
+      }
+
+      &__star {
+        width: 1.2vw;
+        height: 1.2vw;
+      }
+
+      &__title h6 {
+        margin-left: 1vw;
+        max-width: 80%;
+      }
+    }
+  }
 }
